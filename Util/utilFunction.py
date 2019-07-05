@@ -99,8 +99,9 @@ def validUsefulProxy(proxy):
     proxies = {"http": "http://{proxy}".format(proxy=proxy)}    
     try:
         # 超过5秒的代理就不要了
-        r = requests.get('http://baidu.com', proxies=proxies, timeout=5, verify=False)
-        if r.status_code == 200:
+        r = requests.get('http://hws.m.taobao.com/d/modulet/v5/WItemMouldDesc.do', proxies=proxies, timeout=5, verify=False, allow_redirects=False)
+        print(r)
+        if r.status_code < 300:
             return True            
     except Exception as e:
         # logger.error(str(e))

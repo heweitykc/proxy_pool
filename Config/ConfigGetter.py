@@ -46,6 +46,10 @@ class ConfigGetter(object):
         return DATABASES.get("default", {}).get("PASSWORD", "")
 
     @LazyProperty
+    def db_index(self):
+        return DATABASES.get("default", {}).get("DBINDEX", 15)
+
+    @LazyProperty
     def proxy_getter_functions(self):
         return PROXY_GETTER
 

@@ -36,6 +36,7 @@ DATABASES = {
         "HOST": DB_HOST,
         "PORT": DB_PORT,
         "NAME": "proxy",
+        "DBINDEX": 15,
         "PASSWORD": ""
 
     }
@@ -66,5 +67,5 @@ PROXY_GETTER = [
 
 SERVER_API = {
     "HOST": "0.0.0.0",  # The ip specified which starting the web API
-    "PORT": 5010  # port number to which the server listens to
+    "PORT": 5011  # port number to which the server listens to
 }
